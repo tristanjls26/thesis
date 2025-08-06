@@ -159,8 +159,8 @@ function formatTimestamp(ts) {
 
   async function fetchData() {
     try {
-      const response1 = await fetch("https://watermonitoringsystem-d3e93-default-rtdb.asia-southeast1.firebasedatabase.app/unit_1.json");
-      const response2 = await fetch("https://watermonitoringsystem-d3e93-default-rtdb.asia-southeast1.firebasedatabase.app/unit_2.json");
+      const response1 = await fetch("https://thesis-1bda3-default-rtdb.asia-southeast1.firebasedatabase.app/unit_1.json");
+      const response2 = await fetch("https://thesis-1bda3-default-rtdb.asia-southeast1.firebasedatabase.app/unit_2.json");
 
       const unit1Data = await response1.json();
       const unit2Data = await response2.json();
@@ -219,17 +219,17 @@ function formatTimestamp(ts) {
 
       // Also update latest values on cards
       if (latest) {
-        document.getElementById("ph1").textContent = `pH: ${latest.u1.ph_1}`;
-        document.getElementById("ph2").textContent = `pH: ${latest.u2.ph_2}`;
+        document.getElementById("ph1").textContent = pH: ${latest.u1.ph_1};
+        document.getElementById("ph2").textContent = pH: ${latest.u2.ph_2};
 
-        document.getElementById("temp1").textContent = `Temperature: ${latest.u1.temperature_1}°C`;
-        document.getElementById("temp2").textContent = `Temperature: ${latest.u2.temperature_2}°C`;
+        document.getElementById("temp1").textContent = Temperature: ${latest.u1.temperature_1}°C;
+        document.getElementById("temp2").textContent = Temperature: ${latest.u2.temperature_2}°C;
 
-        document.getElementById("turb1").textContent = `Turbidity: ${latest.u1.turbidity_1} NTU`;
-        document.getElementById("turb2").textContent = `Turbidity: ${latest.u2.turbidity_2} NTU`;
+        document.getElementById("turb1").textContent = Turbidity: ${latest.u1.turbidity_1} NTU;
+        document.getElementById("turb2").textContent = Turbidity: ${latest.u2.turbidity_2} NTU;
 
-        document.getElementById("tds1").textContent = `TDS: ${latest.u1.tds_1} ppm`;
-        document.getElementById("tds2").textContent = `TDS: ${latest.u2.tds_2} ppm`;
+        document.getElementById("tds1").textContent = TDS: ${latest.u1.tds_1} ppm;
+        document.getElementById("tds2").textContent = TDS: ${latest.u2.tds_2} ppm;
       }
 
     } catch (error) {
